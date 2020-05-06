@@ -5,6 +5,8 @@ from sklearn import linear_model
 G = nx.DiGraph()
 f = open("/Users/christianliu/Desktop/CSI532/project/532projectdataset.txt", "r", encoding='utf-8', errors='ignore')
 for line in f:
+    date_week = time.strftime("%A", time.gmtime(int(line.split(' ')[0]) / 1000))
+    if date_week != "Sunday" or date_week != "Saturday":
     G.add_node(line.split(' ')[1])
     G.add_node(line.split(' ')[2])
     G.add_edge(line.split(' ')[1], line.split(' ')[2].strip('\n'))
