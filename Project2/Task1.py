@@ -1,5 +1,5 @@
 import networkx as nx
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import time
 
 G = nx.DiGraph()
@@ -31,6 +31,7 @@ in_deg_hist = [list(dict(in_degree_vals).values()).count(x) for x in in_deg_uniq
 
 out_deg_uniq = sorted(dict(out_degree_vals).values())
 out_deg_hist = [list(dict(out_degree_vals).values()).count(x) for x in out_deg_uniq]
+
 
 plt.figure()
 plt.loglog(deg_uniq, deg_hist, 'ro-')
