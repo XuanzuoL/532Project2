@@ -1,6 +1,8 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 from sklearn import linear_model
+import numpy as np
+import time
 
 G = nx.DiGraph()
 f = open("/Users/christianliu/Desktop/CSI532/project/532projectdataset.txt", "r", encoding='utf-8', errors='ignore')
